@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      target: production
+      args:
+        - NODE_VERSION=18.12.1
+    container_name: app-container
+    tty: true
+    volumes:
+      - .:/opt/app:cached
+      - node-modules-volume:/opt/app/node_modules
+volumes:
+  node-modules-volume: null
