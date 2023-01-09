@@ -106,3 +106,5 @@ typings/
 # Project Setting
 dist/*
 !.gitkeep
+
+tmp
